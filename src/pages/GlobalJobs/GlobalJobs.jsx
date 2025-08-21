@@ -5,7 +5,7 @@ import "./GlobalJobs.css";
 import JobCategory from "./JobCategory";
 import UrgentOpenCard from "./UrgentOpenCard";
 import SearchAleart from "./SearchAleart";
-import axios from "axios";
+
 
 
 export default function GlobalJobs({urgentlyOpenedJobs,jobList,setSelectedJobFromJobPage}) {

@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
 import "./Ratings.css";
-import TopListCard from "./TopListCard";
 import TopThreeCard from "./TopThreeCard";
-import UserReviewCard from "./UserReviewCard";
 import axios from "axios";
 import ReviewAccording from "./ReviewAccording";
 import Toast from "../Toast";
@@ -59,14 +57,14 @@ export default function Ratings({
     <>
       <div className="maincontainer_Ratings">
         <div className="main_title_R ">
-          <h1 className="display-3" id="ratingPage_main_title">“Reviews That Build Trust”</h1>
+          <h1 className="display-3">“Reviews That Build Trust”</h1>
         </div>
         <div className="sub_title_R">
           <h1 className="display-6 fw-lighter fs-4">Top Agencies of the month</h1>
         </div>
 
         <div className="one_two_three_container">
-          <div className="two bg-secondary common_all">
+          <div className="two bg-primary common_all">
             <TopThreeCard
               name={
                 agenciesWithLogos[1]
@@ -75,9 +73,9 @@ export default function Ratings({
               }
               logoPic={agenciesWithLogos[1] ? agenciesWithLogos[1].logo : ""}
             />
-            <div className="number common_all fs-1 text-light">#2</div>
+            <div className="number common_all fs-1">#2</div>
           </div>
-          <div className="one bg-dark common_all">
+          <div className="one bg-success common_all">
             <TopThreeCard
               name={
                 agenciesWithLogos[0]
@@ -86,7 +84,7 @@ export default function Ratings({
               }
               logoPic={agenciesWithLogos[0] ? agenciesWithLogos[0].logo : ""}
             />
-            <div className="number common_all fs-1 text-light">#1</div>
+            <div className="number common_all fs-1">#1</div>
           </div>
           <div className="three bg-warning common_all">
             <TopThreeCard
@@ -97,7 +95,7 @@ export default function Ratings({
               }
               logoPic={agenciesWithLogos[2] ? agenciesWithLogos[2].logo : ""}
             />
-            <div className="number common_all fs-1 text-light">#3</div>
+            <div className="number common_all fs-1 ">#3</div>
           </div>
         </div>
 
@@ -134,7 +132,6 @@ export default function Ratings({
                 regarding:
               </label>
               <select
-                id="agency_to_give_review"
                 className="form-select w-25 ms-1"
                 aria-label="Default select example"
                 value={reviewObject.agencyId}
@@ -142,7 +139,7 @@ export default function Ratings({
               >
                 <option selected>Open this select menu</option>
                 {agencies ? (
-                  agencies?.map((agency, index) => {
+                  agencies.map((agency, index) => {
                     return (
                       <option value={agency.agencyId} key={index}>
                         {agency.agencyName}
@@ -157,8 +154,7 @@ export default function Ratings({
               <label className="form-label ms-3">Service No:</label>
               <div className="w-20">
                 <input type="text" class="form-control ms-1 " value={reviewObject.serviceNumber}
-                onChange={(e)=>setReviewObject({...reviewObject,serviceNumber:e.target.value})}
-                id="review_text_box"/>
+                onChange={(e)=>setReviewObject({...reviewObject,serviceNumber:e.target.value})}/>
               </div>
             </div>
 
@@ -174,13 +170,13 @@ export default function Ratings({
             <button type="button" class="btn btn-outline-primary me-2">
               clear
             </button>
-            <button className="btn btn-primary" type="button" onClick={()=>handleReviewSubmit()} id="submit_your_comment">
+            <button className="btn btn-primary" type="button" onClick={()=>handleReviewSubmit()}>
               submit
             </button>
           </div>
         </div>
       </div>
-      <Toast showToast={reviewTost} setShowToast={setReviewToast} message={"✅ your review is added!"} id="review_ok_toast"/>
+      <Toast showToast={reviewTost} setShowToast={setReviewToast} message={"✅ your review is added!"}/>
       <Footer />
     </>
 :<>

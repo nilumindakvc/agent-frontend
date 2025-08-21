@@ -1,6 +1,6 @@
-import axios from "axios";
+
 import "./ExploreGlobe.css";
-import { useEffect } from "react";
+
 
 export default function RegionCard(props){
 
