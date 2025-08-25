@@ -10,10 +10,10 @@ import SearchAleart from "./SearchAleart";
 
 export default function GlobalJobs({urgentlyOpenedJobs,jobList,setSelectedJobFromJobPage}) {
   const imageArray = [
-    { img: "src/assets/cleaning.jpg" },
-    { img: "src/assets/waiter.jpg" },
-    { img: "src/assets/construction.jpg" },
-    { img: "src/assets/logistics.jpg" },
+    { img: "/logistics.jpg" },
+    { img: "/waiter.jpg" },
+    { img: "/construction.jpg" },
+    { img: "/logistics.jpg" },
   ];
  
   const [searchedCountry,setSearchedCountry]=useState('');
@@ -53,7 +53,7 @@ export default function GlobalJobs({urgentlyOpenedJobs,jobList,setSelectedJobFro
           {
             urgentlyOpenedJobs?urgentlyOpenedJobs.map((ujob,index)=>
                <UrgentOpenCard  jobTitle={ujob.jobTitle}  description={ujob.jobDescription}  agency={ujob.agencyName} 
-                country={ujob.countryName} salary={ujob.salaryRange} image={`src/assets/ct${ujob.categoryId}.png`} index={index}
+                country={ujob.countryName} salary={ujob.salaryRange} image={`/ct${ujob.categoryId}.png`} index={index}
                 setSelectedJobFromJobPage={setSelectedJobFromJobPage} ujob={ujob}/>
           
             ):<>

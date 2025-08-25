@@ -12,7 +12,7 @@
 .site_describe_container_pic{
   width: 100%;
   height: 700px;
-  background-image:url('src/assets/road.jpg'); /* Path to your image */
+  background-image:url('/public/road.jpg'); /* Path to your image */
   background-size: cover;       /* Scales the image to cover the container */
   background-position: center;  /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -102,28 +102,28 @@
 }
 
 .image_sec_1{
-  background-image: url('src/assets/globalpartner.jpg');
-  mask-image: url('src/assets/mask2.png');
-  -webkit-mask-image: url('src/assets/mask2.png');
+  background-image: url('/public/globalpartner.jpg');
+  mask-image: url('/public/mask2.png');
+  -webkit-mask-image: url('/public/mask2.png');
 }
 
 
 .image_sec_2{
-  background-image: url('src/assets/welding.jpg');
-  mask-image: url('src/assets/mask2.png');
-  -webkit-mask-image: url('src/assets/mask2.png');
+  background-image: url('/public/welding.jpg');
+  mask-image: url('/public/mask2.png');
+  -webkit-mask-image: url('/public/mask2.png');
 
 }
 .image_sec_3{
-  background-image: url('src/assets/register.jpg');
-  mask-image: url('src/assets/mask3.png');
-  -webkit-mask-image: url('src/assets/mask3.png');
+  background-image: url('/public/register.jpg');
+  mask-image: url('/public/mask3.png');
+  -webkit-mask-image: url('/public/mask3.png');
 
 }
 .image_sec_4{
-  background-image: url('src/assets/rating.jpg');
-  mask-image: url('src/assets/mask2.png');
-  -webkit-mask-image: url('src/assets/mask2.png');
+  background-image: url('/public/rating.jpg');
+  mask-image: url('/public/mask3.png');
+  -webkit-mask-image: url('/public/mask2.png');
 
 }
 .starter_agent{

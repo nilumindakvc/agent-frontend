@@ -6,6 +6,10 @@ import RegionCountries from "./RegionCountries";
 import TopAgency from "./TopAgency";
 import axios from "axios";
 import { baseurl } from "../../config";
+import MiddleEast from "../../assets/middle east.jpg"
+import Europe from "../../assets/europe.jpg"
+import EastAsia from "../../assets/east asia.jpg"
+import SouthKoria from "../../assets/southkoria.jpg"
 
 
 export default function ExploreGlobe({allCountries,agency_CountryPairList,agencies,setSelectedAgency}) {
@@ -98,10 +102,10 @@ export default function ExploreGlobe({allCountries,agency_CountryPairList,agenci
       <div className="region_caption ">Available Regions</div>
       <div className="regions">
      
-        <RegionCard pic="src\assets\middle east.jpg" cap="Middle East"  setRegionSelected={setRegionSelected} regionId={1}/>
-        <RegionCard pic="src\assets\europe.jpg" cap="Europe" setRegionSelected={setRegionSelected} regionId={2}/>
-        <RegionCard pic="src\assets\east asia.jpg" cap="MEast Asia" setRegionSelected={setRegionSelected} regionId={3}/>
-        <RegionCard pic="src\assets\southkoria.jpg" cap="South Koria" setRegionSelected={setRegionSelected} regionId={4}/>
+        <RegionCard pic={MiddleEast} cap="Middle East"  setRegionSelected={setRegionSelected} regionId={1}/>
+        <RegionCard pic={Europe} cap="Europe" setRegionSelected={setRegionSelected} regionId={2}/>
+        <RegionCard pic={EastAsia} cap="East Asia" setRegionSelected={setRegionSelected} regionId={3}/>
+        <RegionCard pic={SouthKoria} cap="South Koria" setRegionSelected={setRegionSelected} regionId={4}/>
       </div>
 
       <div className="region_caption">Available countries</div>
