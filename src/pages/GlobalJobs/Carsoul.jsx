@@ -1,7 +1,19 @@
 import { useEffect } from "react";
+import { Carousel } from "bootstrap";
 import "./GlobalJobs.css";
 
 export default function Carsoul({ imageArray }) {
+  useEffect(() => {
+  const element = document.querySelector("#carouselExampleSlidesOnly");
+  if (element) {
+    const carousel = new Carousel(element, {
+      interval: 3000,
+      ride: "carousel"
+    });
+    return () => carousel.dispose(); 
+  }
+ }, []);
+
 
   return (
     

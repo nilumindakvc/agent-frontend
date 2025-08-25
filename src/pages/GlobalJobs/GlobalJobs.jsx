@@ -10,7 +10,7 @@ import SearchAleart from "./SearchAleart";
 
 export default function GlobalJobs({urgentlyOpenedJobs,jobList,setSelectedJobFromJobPage}) {
   const imageArray = [
-    { img: "/logistics.jpg" },
+    { img: "/cleaning.jpg" },
     { img: "/waiter.jpg" },
     { img: "/construction.jpg" },
     { img: "/logistics.jpg" },
@@ -24,6 +24,10 @@ export default function GlobalJobs({urgentlyOpenedJobs,jobList,setSelectedJobFro
      setMatchingJobs(matchedJobs);
   }
 
+  useEffect(
+    ()=>{
+      
+    },[window.location.pathname])
   
   return (
     <>
