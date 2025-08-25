@@ -8,7 +8,6 @@ export default function JobCard(props){
             <div class="row g-0">
                 <div class="col-md-4 d-flex flex-column align-items-center justify-content-center ">
                 <img src={`/ct${props.category}.png`} className="img-fluid rounded" style={{ maxWidth: '60px', height: 'auto' }} alt="..." />
-
                 </div>
                 <div class="col-md-8">
                 <div class="card-body">

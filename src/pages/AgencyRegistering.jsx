@@ -31,10 +31,10 @@ export default function AgencyRegistering({
   const [publishingAgencyJobList, setPublishingAgencyJobList] = useState(null);
   const [passwordToPublish, setPasswordToPublish] = useState();
 
-  const [countriesAvailable, setCountriesAvailable] = useState(null);
+  const [countriesAvailable, setCountriesAvailable] = useState([]);
   const [countryx, setCountryX] = useState(null);
 
-  const [categoriesAvailable, setCategoriesAvailable] = useState(null);
+  const [categoriesAvailable, setCategoriesAvailable] = useState([]);
   const [categoryx, setCategoryx] = useState();
 
   const [allRegions, setAllRegions] = useState(null);
@@ -864,12 +864,11 @@ export default function AgencyRegistering({
                           onChange={handleSelectCategory}
                         >
                           <option value="">Select Category</option>
-                          {categoriesAvailable!=null?categoriesAvailable.map((category, index) =>{
-                             return (
+                          {categoriesAvailable.map((category, index) => (
                             <option value={category.categoryName} key={index}>
                               {category.categoryName}
                             </option>
-                          )}):<option>...</option>}
+                          ))}
                         </select>
                       </div>
                     </div>
@@ -885,12 +884,11 @@ export default function AgencyRegistering({
                           onChange={handleSelectCountry}
                         >
                           <option value="">Select country</option>
-                          {countriesAvailable!=null?countriesAvailable.map((country, index) =>{ 
-                            return(
+                          {countriesAvailable.map((country, index) => (
                             <option value={country.countryName} key={index}>
                               {country.countryName}
                             </option>
-                          )}):<option>...</option>}
+                          ))}
                         </select>
                       </div>
                       <div class="mb-3">
